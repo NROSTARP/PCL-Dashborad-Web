@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
+</head>
+
+<body style="background-color: #1e293b;">
+
+  <input type="checkbox" id="check" checked>
+  <!--header area start-->
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+
+    <div class="header_text">
+
+      <div class="left_area">
+        <h3>AUTOMATION <span>INTELLIGENT</span></h3>
+      </div>
+      <div class="right_area">
+        <div class="control_btn_time"><span id="time"></span></div>
+        <a href="#" class="control_btn">
+          <i class="fa-solid fa-circle-play"></i>
+          <p>START</p>
+        </a>
+        <a href="#" class="control_btn">
+          <i class="fa-solid fa-circle-pause"></i>
+          <p>PAUSE</p>
+        </a>
+        <a href="#" class="control_btn">
+          <i class="fa-solid fa-circle-stop"></i>
+          <p>STOP</p>
+        </a>
+        <a href="#" class="exit control_btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <p>EXIT</p>
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+  <!--header area end-->
+
+  <!--sidebar start-->
+  <div class="sidebar">
+    <a href="/index.html"  style="background-color:#19B3D3;"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+    <a href="/pages/sample.html"><i class="fas fa-cogs"></i><span>Sample</span></a>
+    <a href="#"><i class="fas fa-table"></i><span>Data</span></a>
+    <a href="#"><i class="fas fa-th"></i><span>Control</span></a>
+    <a href="#"><i class="fas fa-info-circle"></i><span>Setup</span></a>
+    <a href="#"><i class="fas fa-sliders-h"></i><span>Status</span></a>
+    <a href="#"><i class="fas fa-sliders-h"></i><span>Alarm</span></a>
+  </div>
+  <!--sidebar end-->
+
+  <!--content start-->
+  <div class="content">
+    <div class="head-info-container">
+
+      <div class="head-info">
+        <div class="info-test">
+          
+          <div class="title-container">
+            <div class="title-name">In Progress</div>
+            <div class="title-icon">
+              <i class="fa fa-list-check vertical-center"></i>
+            </div>
+          </div>
+          <div class="detail">
+            <span>10</span>
+          </div>
+          <div class="footer-detail">
+            <div class="footer-left">Test Order</div>
+            <div class="footer-right">Update : 4:04 PM</div>
+          </div>
+        </div>
+
+        <div class="info-retrived">
+          <div class="title-container">
+            <div class="title-name">Retrived</div>
+            <div class="title-icon" style="background-color: #ff9f00;">
+              <i class="fa-solid fa-outdent vertical-center"></i>
+            </div>
+          </div>
+          <div class="detail">
+            <span>5</span>
+          </div>
+          <div class="footer-detail">
+            <div class="footer-left">Simple</div>
+            <div class="footer-right">Update : 4:10 PM</div>
+          </div>
+        </div>
+
+        <div class="info-ejected">
+          <div class="title-container">
+            <div class="title-name">Ejected</div>
+            <div class="title-icon" style="background-color: #b22222;">
+              <i class="fa-solid fa-filter-circle-xmark vertical-center"></i>
+            </div>
+          </div>
+          <div class="detail">
+            <span>1</span>
+          </div>
+          <div class="footer-detail">
+            <div class="footer-left">Simple</div>
+            <div class="footer-right">Update : 3:10 PM</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="middle-info-container">
+      <div class="chart-info-container">
+        <div class="title-chart">
+          <div class="chart-name">Tube Status</div>
+          <div class="chart-option">
+            <div class="option-1">
+              <div class="type-1"></div>
+              <span style="font-size: 0.8vw;"> Type1</span>
+            </div>
+            <div class="option-2">
+              <div class="type-2"></div>
+              <span style="font-size: 0.8vw;"> Type2</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex-wrapper">
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path class="circle"
+                stroke-dasharray="30, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="20.35" class="percentage">30%</text>
+            </svg>
+          </div>
+          
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart green">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path class="circle"
+                stroke-dasharray="60, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="20.35" class="percentage">60%</text>
+            </svg>
+          </div>
+        
+          
+        </div>
+      </div>
+      <div class="optinal-info-container">
+        <div class="optinal-info">
+          <div class="optinal-info-stored">
+            <div class="optinal-info-stored-title">TUBE WAS STORED</div>
+            <div class="optinal-info-stored-value"><span>0</span></div>
+            <div class="optinal-info-stored-icon">
+              <i class="fa-solid fa-inbox"></i>
+            </div>
+          </div>
+
+          <div class="optinal-info-way">
+            <div class="optinal-info-way-title">TUBE ON THE WAY</div>
+            <div class="optinal-info-way-value"><span>0</span></div>
+            <div class="optinal-info-way-icon">
+              <i class="fa-solid fa-bars-progress"></i>
+            </div>
+          </div>
+
+          <div class="optinal-info-alarm">
+            <div class="optinal-info-alarm-title">PENDING ALARM</div>
+            <div class="optinal-info-alarm-value"><span>0</span></div>
+            <div class="optinal-info-alarm-icon">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/jquery-3.6.0.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
