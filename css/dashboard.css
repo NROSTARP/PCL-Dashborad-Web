@@ -337,10 +337,10 @@ body{
 }
 
 .chart-info-container {
-    width: 50%;
+    width: 40%;
     height: 90%;
     background-color: #ffffff;
-    margin-left: 5%;
+    margin-left: 10%;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 3%;
@@ -418,7 +418,7 @@ body{
   }
   
   .single-chart {
-    width: 33%;
+    width: 50%;
     justify-content: space-around ;
   }
   

@@ -203,7 +203,7 @@ transition-property: background; */
 .retrive-menu {
   /* width: 9%; */
   margin-top: 6%;
-  margin-left: 5%;
+  margin-left: 10%;
   font-size: 1vw;
   color: #fff;
   cursor: pointer;
@@ -230,9 +230,20 @@ transition-property: background; */
   width: 80%;
   height: 80%;
   background-color: #fff;
-  margin-left: 5%;
+  margin-left: 10%;
 
   border-radius: 10px;
+}
+
+.search-menu {
+
+  width: 15%;
+  height: 20%;
+  margin-top: 6%;
+  margin-left: 3%;
+  /* font-size: 1vw; */
+  /* color: #fff; */
+  /* cursor: pointer; */
 }
 
 .content-table {

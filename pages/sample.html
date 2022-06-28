@@ -12,103 +12,190 @@
 
 <body style="background-color: #1e293b;">
 
-    <input type="checkbox" id="check" checked>
-    <!--header area start-->
-    <header>
-      <label for="check">
-        <i class="fas fa-bars" id="sidebar_btn"></i>
-      </label>
-  
-      <div class="header_text">
-  
-        <div class="left_area">
-          <h3>AUTOMATION <span>INTELLIGENT</span></h3>
-        </div>
-        <div class="right_area">
-          <div class="control_btn_time"><span id="time"></span></div>
-          <a href="#" class="control_btn">
-            <i class="fa-solid fa-circle-play"></i>
-            <p>START</p>
-          </a>
-          <a href="#" class="control_btn">
-            <i class="fa-solid fa-circle-pause"></i>
-            <p>PAUSE</p>
-          </a>
-          <a href="#" class="control_btn">
-            <i class="fa-solid fa-circle-stop"></i>
-            <p>STOP</p>
-          </a>
-          <a href="#" class="exit control_btn">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <p>EXIT</p>
-          </a>
-        </div>
-  
+  <input type="checkbox" id="check" checked>
+  <!--header area start-->
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+
+    <div class="header_text">
+
+      <div class="left_area">
+        <h3>AUTOMATION <span>INTELLIGENT</span></h3>
       </div>
-  
-    </header>
-    <!--header area end-->
-    
-    <!--sidebar start-->
-    <div class="sidebar">
-      <a href="/index.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="/pages/sample.html" style="background-color:#19B3D3;"><i class="fas fa-cogs"></i><span>Sample</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>Data</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Control</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>Setup</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Status</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Alarm</span></a>
-    </div>
-    <!--sidebar end-->
-
-
-    <div class="content">
-
-      <div class="menu-list">
-        <div class="retrive-menu">Retrive Sample</div>
-        <div class="sample-menu">Sample Tracking</div>
+      <div class="right_area">
+        <div class="control_btn_time"><span id="time"></span></div>
+        <a href="#" class="control_btn">
+          <i class="fa-solid fa-circle-play"></i>
+          <p>START</p>
+        </a>
+        <a href="#" class="control_btn">
+          <i class="fa-solid fa-circle-pause"></i>
+          <p>PAUSE</p>
+        </a>
+        <a href="#" class="control_btn">
+          <i class="fa-solid fa-circle-stop"></i>
+          <p>STOP</p>
+        </a>
+        <a href="#" class="exit control_btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <p>EXIT</p>
+        </a>
       </div>
-
-      <div class="retrive-table">
-
-        <table class="content-table">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Points</th>
-              <th>Team</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Domenic</td>
-              <td>88,110</td>
-              <td>dcode</td>
-            </tr>
-            <tr class="active-row">
-              <td>2</td>
-              <td>Sally</td>
-              <td>72,400</td>
-              <td>Students</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Nick</td>
-              <td>52,300</td>
-              <td>dcode</td>
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
-
-      <div class="sample-table"></div>
 
     </div>
+
+  </header>
+  <!--header area end-->
+
+  <!--sidebar start-->
+  <div class="sidebar">
+    <a href="/index.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+    <a href="/pages/sample.html" style="background-color:#19B3D3;"><i class="fas fa-cogs"></i><span>Sample</span></a>
+    <a href="#"><i class="fas fa-table"></i><span>Data</span></a>
+    <a href="#"><i class="fas fa-th"></i><span>Control</span></a>
+    <a href="#"><i class="fas fa-info-circle"></i><span>Setup</span></a>
+    <a href="#"><i class="fas fa-sliders-h"></i><span>Status</span></a>
+    <a href="#"><i class="fas fa-sliders-h"></i><span>Alarm</span></a>
+  </div>
+  <!--sidebar end-->
+
+
+  <div class="content">
+
+    <div class="menu-list">
+      <div class="retrive-menu" id="retrive-menu" onclick="RetriveShow()">Retrive Sample</div>
+      <div class="sample-menu" id="sample-menu" onclick="SampleShow()">Sample Tracking</div>
+
+      <input type="search" id="retrive-input" onkeyup="search()" placeholder="Search for names.." class="search-menu">
+    </div>
+
+    <div class="retrive-table">
+
+      <table class="content-table" id="retrive-table" style="display: none;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Barcode</th>
+            <th>Description</th>
+            <th>Retive Status</th>
+            <th>Request Time</th>
+            <th>Done Time</th>
+          </tr>
+        </thead>
+        <tbody id="active-event">
+          <tr>
+            <td>1</td>
+            <td>Domenic</td>
+            <td>88,110</td>
+            <td>dcode</td>
+            <td>dcode</td>
+            <td>dcode</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sally</td>
+            <td>72,400</td>
+            <td>Students</td>
+            <td>Students</td>
+            <td>Students</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nick</td>
+            <td>52,300</td>
+            <td>dcode</td>
+            <td>dcode</td>
+            <td>dcode</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="content-table" id="sample-table" style="display: none;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Barcode</th>
+            <th>Description</th>
+            <th>Retive Status</th>
+            <th>Request Time</th>
+            <th>Done Time</th>
+          </tr>
+        </thead>
+        <tbody id="active-event">
+          <tr>
+            <td>1</td>
+            <td>dddd</td>
+            <td>88,110</td>
+            <td>dcode</td>
+            <td>dcode</td>
+            <td>dcode</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sally</td>
+            <td>72,400</td>
+            <td>Students</td>
+            <td>Students</td>
+            <td>Students</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nick</td>
+            <td>52,300</td>
+            <td>dcode</td>
+            <td>dcode</td>
+            <td>dcode</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
   <script src="/js/jquery-3.6.0.js"></script>
   <script src="/js/script.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#retrive-input").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#retrive-table tr").filter(function () {
+          $(this).toggle($(this).text()
+            .toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+
+  <script>
+    function RetriveShow() {
+      document.getElementById("retrive-menu").style.color = "#19B3D3";
+      document.getElementById("sample-menu").style.color = "#fff";
+
+      document.getElementById("retrive-table").style.display = "";
+      document.getElementById("sample-table").style.display = "none";
+    }
+
+    function SampleShow() {
+      document.getElementById("sample-menu").style.color = "#19B3D3";
+      document.getElementById("retrive-menu").style.color = "#fff";
+
+      document.getElementById("sample-table").style.display = "";
+      document.getElementById("retrive-table").style.display = "none";
+    }
+
+
+        $(document).ready(function() {
+            $('tr').click(function() {
+                $('tr.active-row').removeClass("active-row");
+                $(this).addClass("active-row");
+            });
+        });
+
+  </script>
 </body>
+
+
 
 </html>
