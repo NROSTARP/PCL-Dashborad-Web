@@ -182,3 +182,71 @@ transition-property: background; */
   #check{
     display: none;
   }
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #0B87A6; */
+}
+
+.menu-list {
+  width: 100%;
+  height: 20%;
+  /* z-index: 999; */
+  /* border: 1px solid red; */
+  /* background-color: #0B87A6; */
+  display: flex;
+  align-items: baseline;
+}
+
+.control-menu {
+  /* width: 9%; */
+  /* margin-top: 6%; */
+  margin-top: 6%;
+  /* margin-left: 3%; */
+  padding: 5px;
+  margin-left: 10%;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.command-menu {
+  /* width: 9%; */
+  /* margin-top: 6%; */
+  padding: 5px;
+  margin-top: 6%;
+  /* margin-left: 3%; */
+  margin-left: 3%;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.manual-menu {
+  /* width: 9%; */
+  /* margin-top: 6%; */
+  padding: 5px;
+  margin-top: 6%;
+  /* margin-left: 3%; */
+  margin-left: 3%;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.control-menu:hover {
+  color: #30c7e6;
+}
+
+.command-menu:hover {
+  color: #30c7e6;
+}
+
+.manual-menu:hover {
+  color: #30c7e6;
+}
+
