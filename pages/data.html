@@ -61,6 +61,407 @@
     </div>
     <!--sidebar end-->
 
+    <div class="content">
+
+    <div class="menu-list">
+      
+        <div class="testcode-menu" id="testcode-menu" onclick="TestcodeShow()">Test Code</div>
+        <div class="testorder-menu" id="testorder-menu" onclick="TestorderShow()">Test Order</div>
+        <div class="stockyard-menu" id="stockyard-menu" onclick="StockyardShow()">Stock Yard</div>
+  
+        <input type="search" id="search-input" onkeyup="search()" placeholder="Search for names.." class="search-menu">
+        <div class="search-menu" id="drop-input" style="visibility: hidden; display: none;">
+          <label for="Type" style="color: #fff;">Select Tray Number : </label>
+          <select name="Type" id="type">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="testcode-page" id="testcode-page" style="visibility: hidden; display: none;">
+          <div class="left-container">
+
+            <div class="testcode-left-table-container">
+
+              <table class="content-table" id="testcode-left-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Detail</th>
+                    <th>Is_available</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="active-event">
+                  <tr>
+                    <td>1</td>
+                    <td>Domenic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Sally</td>
+                    <td>72,400</td>
+                    <td>Students</td>
+                    <td>Students</td>
+                    <td>Students</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Nick</td>
+                    <td>52,300</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div class="testcode-option-left-container">
+
+              <div class="left-option">
+                <div class="side-left">
+                  <div class="first-option">
+                    
+                    <div>
+                      <label for="Type">Type : </label>
+                      <select name="Type" id="type">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="name_Type">Name :</label>
+                      <input type="text" id="name_Type" name="name_Type">
+                    </div>
+                    
+                  </div>
+                  <div class="second-option">
+
+                    <div>
+                      <label for="descript">Descript :</label>
+                      <input type="text" id="descript" name="descript">
+                    </div>
+
+                    <div>
+                      <label for="enable">Enable </label>
+                      <input type="checkbox" id="enable" name="enable" value="enable">
+                    </div>
+
+                  </div>
+                </div>
+                <div class="side-right">
+
+                  <button>Add</button>
+                  <button>Update</button>
+                  <button>Delete</button>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="right-container">
+
+            <div class="testcode-right-table-container">
+
+              <table class="content-table" id="testcode-right-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Ins_code</th>
+                    <th>Las_code</th>
+                    <th>Description</th>
+                    <th>Is_available</th>
+                    <th>Is_enable</th>
+                  </tr>
+                </thead>
+                <tbody id="active-event">
+                  <tr>
+                    <td>1</td>
+                    <td>Domenic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Sally</td>
+                    <td>72,400</td>
+                    <td>Students</td>
+                    <td>Students</td>
+                    <td>Students</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Nick</td>
+                    <td>52,300</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                    <td>dcode</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div class="testcode-option-right-container">
+
+              <div class="left-option">
+                <div class="side-left">
+                  <div class="first-option">
+
+                    <div>
+                      <label for="instrument">Instrument Test Code :</label>
+                      <input type="text" id="instrument" name="instrument">
+                    </div>
+
+                    <div>
+                      <label for="las">LAS Test Code :</label>
+                      <input type="text" id="las" name="las">
+                    </div>
+                    
+                  </div>
+                  <div class="second-option">
+
+                    <div>
+                      <label for="descript">Descript :</label>
+                      <input type="text" id="descript2" name="descript">
+                    </div>
+
+                    <div>
+                      <label for="enable">Enable </label>
+                      <input type="checkbox" id="enable2" name="enable" 
+                      value="enable">
+                    </div>
+
+                  </div>
+                </div>
+                <div class="side-right">
+
+                  <button>Add</button>
+                  <button>Update</button>
+                  <button>Delete</button>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+      </div>
+
+      <div class="testorder-page" id="testorder-page" style="visibility: hidden; display: none; ">
+        <table class="content-table" id="testorder-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Barcode</th>
+              <th>Description</th>
+              <th>Retive Status</th>
+              <th>Request Time</th>
+              <th>Done Time</th>
+            </tr>
+          </thead>
+          <tbody id="active-event">
+            <tr>
+              <td>1</td>
+              <td>Domenic</td>
+              <td>88,110</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sally</td>
+              <td>72,400</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nick</td>
+              <td>52,300</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="stockyard-page" id="stockyard-page" style="visibility: hidden; display: none; ">
+        <table class="content-table" id="testorder-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>TrayID</th>
+              <th>HolePositionX</th>
+              <th>HolePositionY</th>
+              <th>TubeBarcode</th>
+              <th>HoleName</th>
+              <th>IsEmpty</th>
+              <th>TubeInDate</th>
+              <th>LastupdateDate</th>
+            </tr>
+          </thead>
+          <tbody id="active-event">
+            <tr>
+              <td>1</td>
+              <td>Domenic</td>
+              <td>88,110</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sally</td>
+              <td>72,400</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nick</td>
+              <td>52,300</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#search-input").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#retrive-table tr").filter(function () {
+            $(this).toggle($(this).text()
+              .toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
+
+    <script>
+      function TestcodeShow() {
+        document.getElementById("testcode-menu").style.color = "#19B3D3";
+        document.getElementById("testcode-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("testcode-menu").style.borderRadius = "5px";
+  
+        document.getElementById("testorder-menu").style.color = "#fff";
+        document.getElementById("testorder-menu").style.backgroundColor = "";
+        document.getElementById("testorder-menu").style.borderRadius = "";
+
+        document.getElementById("stockyard-menu").style.color = "#fff";
+        document.getElementById("stockyard-menu").style.backgroundColor = "";
+        document.getElementById("stockyard-menu").style.borderRadius = "";
+
+        document.getElementById("testcode-page").style.visibility = "visible";
+        document.getElementById("testcode-page").style.display = "";
+
+        document.getElementById("testorder-page").style.visibility = "hidden";
+        document.getElementById("testorder-page").style.display = "none";
+
+        document.getElementById("stockyard-page").style.visibility = "hidden";
+        document.getElementById("stockyard-page").style.display = "none";
+
+        document.getElementById("search-input").style.visibility = "visible";
+        document.getElementById("search-input").style.display = "";
+        document.getElementById("drop-input").style.visibility = "hidden";
+        document.getElementById("drop-input").style.display = "none";
+  
+      }
+  
+      function TestorderShow() {
+        document.getElementById("testorder-menu").style.color = "#19B3D3";
+        document.getElementById("testorder-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("testorder-menu").style.borderRadius = "5px";
+  
+        document.getElementById("testcode-menu").style.color = "#fff";
+        document.getElementById("testcode-menu").style.backgroundColor = "";
+        document.getElementById("testcode-menu").style.borderRadius = "";
+
+        document.getElementById("stockyard-menu").style.color = "#fff";
+        document.getElementById("stockyard-menu").style.backgroundColor = "";
+        document.getElementById("stockyard-menu").style.borderRadius = "";
+
+        document.getElementById("testcode-page").style.visibility = "hidden";
+        document.getElementById("testcode-page").style.display = "none";
+
+        document.getElementById("stockyard-page").style.visibility = "hidden";
+        document.getElementById("stockyard-page").style.display = "none";
+
+        document.getElementById("testorder-page").style.visibility = "visible";
+        document.getElementById("testorder-page").style.display = "";
+
+        document.getElementById("search-input").style.visibility = "visible";
+        document.getElementById("search-input").style.display = "";
+        document.getElementById("drop-input").style.visibility = "hidden";
+        document.getElementById("drop-input").style.display = "none";
+      }
+
+      function StockyardShow() {
+        document.getElementById("stockyard-menu").style.color = "#19B3D3";
+        document.getElementById("stockyard-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("stockyard-menu").style.borderRadius = "5px";
+  
+        document.getElementById("testcode-menu").style.color = "#fff";
+        document.getElementById("testcode-menu").style.backgroundColor = "";
+        document.getElementById("testcode-menu").style.borderRadius = "";
+
+        document.getElementById("testorder-menu").style.color = "#fff";
+        document.getElementById("testorder-menu").style.backgroundColor = "";
+        document.getElementById("testorder-menu").style.borderRadius = "";
+
+        document.getElementById("testcode-page").style.visibility = "hidden";
+        document.getElementById("testcode-page").style.display = "none";
+
+        document.getElementById("testorder-page").style.visibility = "hidden";
+        document.getElementById("testorder-page").style.display = "none";
+
+        document.getElementById("stockyard-page").style.visibility = "visible";
+        document.getElementById("stockyard-page").style.display = "";
+        document.getElementById("search-input").style.visibility = "hidden";
+        document.getElementById("search-input").style.display = "none";
+        document.getElementById("drop-input").style.visibility = "visible";
+        document.getElementById("drop-input").style.display = "";
+        
+      }
+    </script>
+
   <script src="/js/jquery-3.6.0.js"></script>
   <script src="/js/script.js"></script>
 </body>

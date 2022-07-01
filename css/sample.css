@@ -224,13 +224,24 @@ transition-property: background; */
   color: #30c7e6;
 }
 
+#retrive-table {
+  background-color: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#sample-table {
+  background-color: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
 .retrive-table {
   width: 80%;
   height: 70%;
-  background-color: #fff;
+  
   margin-left: 10%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+
 }
 
 .search-menu {
