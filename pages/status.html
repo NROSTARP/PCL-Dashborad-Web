@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/status.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body style="background-color: #1e293b;">
+
+    <input type="checkbox" id="check" checked>
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+  
+      <div class="header_text">
+  
+        <div class="left_area">
+          <h3>AUTOMATION <span>INTELLIGENT</span></h3>
+        </div>
+        <div class="right_area">
+          <div class="control_btn_time"><span id="time"></span></div>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-play"></i>
+            <p>START</p>
+          </a>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-pause"></i>
+            <p>PAUSE</p>
+          </a>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-stop"></i>
+            <p>STOP</p>
+          </a>
+          <a href="#" class="exit control_btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>EXIT</p>
+          </a>
+        </div>
+  
+      </div>
+  
+    </header>
+    <!--header area end-->
+    
+    <!--sidebar start-->
+    <div class="sidebar">
+      <a href="/index.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="/pages/sample.html" ><i class="fas fa-cogs"></i><span>Sample</span></a>
+      <a href="/pages/data.html"><i class="fas fa-table"></i><span>Data</span></a>
+      <a href="/pages/control.html"><i class="fas fa-th"></i><span>Control</span></a>
+      <a href="/pages/setup.html"><i class="fas fa-info-circle"></i><span>Setup</span></a>
+      <a href="/pages/status.html" style="background-color:#19B3D3;"><i class="fas fa-sliders-h"></i><span>Status</span></a>
+      <a href="/pages/alarm.html"><i class="fas fa-sliders-h"></i><span>Alarm</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content">
+      
+      <div class="menu-list">
+
+        <div class="connection-menu" id="connection-menu" onclick="connectionShow()">Connection</div>
+        <div class="log-menu" id="log-menu" onclick="logShow()">Realtime Log</div>
+        <div class="atm-menu" id="atm-menu" onclick="atmShow()">ATM Connection</div>
+        <div class="io-menu" id="io-menu" onclick="ioShow()">I/O Status</div>
+  
+        <!-- <input type="search" id="search-input" onkeyup="search()" placeholder="Search for names.." class="search-menu"> -->
+
+      </div>
+
+    </div>
+
+    <script>
+      function connectionShow() {
+        document.getElementById("connection-menu").style.color = "#19B3D3";
+        document.getElementById("connection-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("connection-menu").style.borderRadius = "5px";
+  
+        document.getElementById("log-menu").style.color = "#fff";
+        document.getElementById("log-menu").style.backgroundColor = "";
+        document.getElementById("log-menu").style.borderRadius = "";
+
+        document.getElementById("atm-menu").style.color = "#fff";
+        document.getElementById("atm-menu").style.backgroundColor = "";
+        document.getElementById("atm-menu").style.borderRadius = ""; 
+
+        document.getElementById("io-menu").style.color = "#fff";
+        document.getElementById("io-menu").style.backgroundColor = "";
+        document.getElementById("io-menu").style.borderRadius = ""; 
+      }
+  
+      function logShow() {
+        document.getElementById("log-menu").style.color = "#19B3D3";
+        document.getElementById("log-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("log-menu").style.borderRadius = "5px";
+  
+        document.getElementById("connection-menu").style.color = "#fff";
+        document.getElementById("connection-menu").style.backgroundColor = "";
+        document.getElementById("connection-menu").style.borderRadius = "";
+
+        document.getElementById("atm-menu").style.color = "#fff";
+        document.getElementById("atm-menu").style.backgroundColor = "";
+        document.getElementById("atm-menu").style.borderRadius = ""; 
+
+        document.getElementById("io-menu").style.color = "#fff";
+        document.getElementById("io-menu").style.backgroundColor = "";
+        document.getElementById("io-menu").style.borderRadius = ""; 
+      }
+
+      function atmShow() {
+        document.getElementById("atm-menu").style.color = "#19B3D3";
+        document.getElementById("atm-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("atm-menu").style.borderRadius = "5px";
+  
+        document.getElementById("connection-menu").style.color = "#fff";
+        document.getElementById("connection-menu").style.backgroundColor = "";
+        document.getElementById("connection-menu").style.borderRadius = "";
+
+        document.getElementById("log-menu").style.color = "#fff";
+        document.getElementById("log-menu").style.backgroundColor = "";
+        document.getElementById("log-menu").style.borderRadius = ""; 
+
+        document.getElementById("io-menu").style.color = "#fff";
+        document.getElementById("io-menu").style.backgroundColor = "";
+        document.getElementById("io-menu").style.borderRadius = ""; 
+      }
+
+      function ioShow() {
+        document.getElementById("io-menu").style.color = "#19B3D3";
+        document.getElementById("io-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("io-menu").style.borderRadius = "5px";
+  
+        document.getElementById("connection-menu").style.color = "#fff";
+        document.getElementById("connection-menu").style.backgroundColor = "";
+        document.getElementById("connection-menu").style.borderRadius = "";
+
+        document.getElementById("log-menu").style.color = "#fff";
+        document.getElementById("log-menu").style.backgroundColor = "";
+        document.getElementById("log-menu").style.borderRadius = ""; 
+
+        document.getElementById("atm-menu").style.color = "#fff";
+        document.getElementById("atm-menu").style.backgroundColor = "";
+        document.getElementById("atm-menu").style.borderRadius = ""; 
+      }
+    </script>
+
+  <script src="/js/jquery-3.6.0.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

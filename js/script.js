@@ -17,3 +17,7 @@ function refreshTime() {
 }
 
 setInterval(refreshTime, 1000);
+
+function al() {
+  alert("Be careful Open 'Teaching Mode' AutoMode to Stop");
+}

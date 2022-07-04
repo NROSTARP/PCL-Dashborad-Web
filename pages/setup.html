@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/setup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body style="background-color: #1e293b;">
+
+    <input type="checkbox" id="check" checked>
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+  
+      <div class="header_text">
+  
+        <div class="left_area">
+          <h3>AUTOMATION <span>INTELLIGENT</span></h3>
+        </div>
+        <div class="right_area">
+          <div class="control_btn_time"><span id="time"></span></div>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-play"></i>
+            <p>START</p>
+          </a>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-pause"></i>
+            <p>PAUSE</p>
+          </a>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-stop"></i>
+            <p>STOP</p>
+          </a>
+          <a href="#" class="exit control_btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>EXIT</p>
+          </a>
+        </div>
+  
+      </div>
+  
+    </header>
+    <!--header area end-->
+    
+    <!--sidebar start-->
+    <div class="sidebar">
+      <a href="/index.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="/pages/sample.html" ><i class="fas fa-cogs"></i><span>Sample</span></a>
+      <a href="/pages/data.html"><i class="fas fa-table"></i><span>Data</span></a>
+      <a href="/pages/control.html"><i class="fas fa-th"></i><span>Control</span></a>
+      <a href="/pages/setup.html" style="background-color:#19B3D3;"><i class="fas fa-info-circle"></i><span>Setup</span></a>
+      <a href="/pages/status.html"><i class="fas fa-sliders-h"></i><span>Status</span></a>
+      <a href="/pages/alarm.html"><i class="fas fa-sliders-h"></i><span>Alarm</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content">
+      
+      <div class="menu-list">
+
+        <div class="teaching-menu" id="teaching-menu" onclick="teachingShow()">TEACHING</div>
+        <div class="setting-menu" id="setting-menu" onclick="settingShow()">SETTING</div>
+        <!-- <div class="manual-menu" id="manual-menu" onclick="manualShow()">Conveyor Manual</div> -->
+        <!-- <input type="search" id="search-input" onkeyup="search()" placeholder="Search for names.." class="search-menu"> -->
+      </div>
+<!-- <h3>Mices</h3> -->
+      <div class="form-container" id="form-container" style="visibility: hidden; display: none;">
+        <table class="content-table" id="testcode-left-table">
+          <thead>
+            <tr>
+              <th>Misc</th>
+              <th></th>
+              <!-- <th>Name</th>
+              <th>Detail</th>
+              <th>Is_available</th>
+              <th>Status</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AdminPassword</td>
+              <td><input type="password"></td>
+            </tr>
+            <tr>
+              <td>BackupLocation</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>CleanEveryTime</td>
+              <td><input type="time"></td>
+            </tr>
+            <tr>
+              <td>DailyBackup</td>
+              <td><input type="time"></td>
+            </tr>
+            <tr>
+              <td>DayCleanLogFile</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DayCleanMessage</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DayCleanTestOrder</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DayCleanTestOrderDetail</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DayCleanTubeTracking</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DBName</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>DBServerIPAddr</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>DBUserName</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>DBUserPassword</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>DebugModeOn</td>
+              <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>DefaultplcReadInterival</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DefaultDate Time</td>
+              <td><input type="date"></td>
+            </tr>
+            <tr>
+              <td>DIOSShowReadInterival</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>DIOSShowReadInterival</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>EnbleBackup</td>
+              <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>LastBackupSine</td>
+              <td><input type="date"></td>
+            </tr>
+            <tr>
+              <td>LogFileReterntion</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td>ShowRealTimeLogging</td>
+              <td><input type="checkbox"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="btn-layout" id="btn-layout" style="visibility: hidden; display: none;">
+        <button>Restore To Default</button>
+        <button>Save</button>
+      </div>
+    </div>
+
+    <script>
+      function teachingShow() {
+        document.getElementById("teaching-menu").style.color = "#19B3D3";
+        document.getElementById("teaching-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("teaching-menu").style.borderRadius = "5px";
+  
+        document.getElementById("setting-menu").style.color = "#fff";
+        document.getElementById("setting-menu").style.backgroundColor = "";
+        document.getElementById("setting-menu").style.borderRadius = "";
+
+        // document.getElementById("head-container").style.visibility = "visible";
+        // document.getElementById("head-container").style.display = "";
+
+        // document.getElementById("control-container").style.visibility = "visible";
+        // document.getElementById("control-container").style.display = "";
+
+        document.getElementById("form-container").style.visibility = "้hidden";
+        document.getElementById("form-container").style.display = "none";
+
+        document.getElementById("btn-layout").style.visibility = "้hidden";
+        document.getElementById("btn-layout").style.display = "none";
+
+        al();
+      }
+  
+      function settingShow() {
+        document.getElementById("setting-menu").style.color = "#19B3D3";
+        document.getElementById("setting-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("setting-menu").style.borderRadius = "5px";
+  
+        document.getElementById("teaching-menu").style.color = "#fff";
+        document.getElementById("teaching-menu").style.backgroundColor = "";
+        document.getElementById("teaching-menu").style.borderRadius = "";
+
+        document.getElementById("form-container").style.visibility = "visible";
+        document.getElementById("form-container").style.display = "";
+
+        document.getElementById("btn-layout").style.visibility = "visible";
+        document.getElementById("btn-layout").style.display = "";
+      }
+
+    </script>
+
+  <script src="/js/jquery-3.6.0.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+
+</html>

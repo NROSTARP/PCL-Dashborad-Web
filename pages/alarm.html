@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/alarm.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body style="background-color: #1e293b;">
+
+    <input type="checkbox" id="check" checked>
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+  
+      <div class="header_text">
+  
+        <div class="left_area">
+          <h3>AUTOMATION <span>INTELLIGENT</span></h3>
+        </div>
+        <div class="right_area">
+          <div class="control_btn_time"><span id="time"></span></div>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-play"></i>
+            <p>START</p>
+          </a>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-pause"></i>
+            <p>PAUSE</p>
+          </a>
+          <a href="#" class="control_btn">
+            <i class="fa-solid fa-circle-stop"></i>
+            <p>STOP</p>
+          </a>
+          <a href="#" class="exit control_btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>EXIT</p>
+          </a>
+        </div>
+  
+      </div>
+  
+    </header>
+    <!--header area end-->
+    
+    <!--sidebar start-->
+    <div class="sidebar">
+      <a href="/index.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="/pages/sample.html" ><i class="fas fa-cogs"></i><span>Sample</span></a>
+      <a href="/pages/data.html"><i class="fas fa-table"></i><span>Data</span></a>
+      <a href="/pages/control.html"><i class="fas fa-th"></i><span>Control</span></a>
+      <a href="/pages/setup.html"><i class="fas fa-info-circle"></i><span>Setup</span></a>
+      <a href="/pages/status.html"><i class="fas fa-sliders-h"></i><span>Status</span></a>
+      <a href="/pages/alarm.html"  style="background-color:#19B3D3;"><i class="fas fa-sliders-h"></i><span>Alarm</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content">
+      <!-- <h1>Alarm</h1> -->
+      <div class="table-container">
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Message_id</th>
+              <th>module_name</th>
+              <th>Message</th>
+              <th>Descrition</th>
+              <th>User_action</th>
+              <th>Create_date</th>
+              <th>Is_acknowledged</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Domenic</td>
+              <td>88,110</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sally</td>
+              <td>72,400</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+              <td>Students</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nick</td>
+              <td>52,300</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nick</td>
+              <td>52,300</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nick</td>
+              <td>52,300</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+              <td>dcode</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="form-container">
+
+        <div class="form">
+          <div class="left-from">
+            <div>
+              <label for="id" style="color: #fff;">ID</label>
+              <input type="textarea" name="id" class="inputid">
+            </div>
+            
+            <div>
+              <label for="message" style="color: #fff;">Message</label>
+              <input type="textarea" name="message" class="inputtext1"><br>
+            </div>
+
+            <div>
+              <label for="descrition" style="color: #fff;">Descrition</label>
+              <input type="textarea" name="descrition" class="inputtext2">
+            </div>
+
+            <div>
+              <label for="instruction" style="color: #fff;">Instruction</label>
+              <input type="textarea" name="instruction" class="inputtext3">
+            </div>
+
+
+          </div>
+          <div class="right-from">
+
+            <button>Acknowledge</button>
+            <button>Refresh</button>
+            <button>Test</button>
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <script>
+      function controlShow() {
+        document.getElementById("control-menu").style.color = "#19B3D3";
+        document.getElementById("control-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("control-menu").style.borderRadius = "5px";
+  
+        document.getElementById("command-menu").style.color = "#fff";
+        document.getElementById("command-menu").style.backgroundColor = "";
+        document.getElementById("command-menu").style.borderRadius = "";
+
+        document.getElementById("manual-menu").style.color = "#fff";
+        document.getElementById("manual-menu").style.backgroundColor = "";
+        document.getElementById("manual-menu").style.borderRadius = ""; 
+      }
+  
+      function commandShow() {
+        document.getElementById("command-menu").style.color = "#19B3D3";
+        document.getElementById("command-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("command-menu").style.borderRadius = "5px";
+  
+        document.getElementById("control-menu").style.color = "#fff";
+        document.getElementById("control-menu").style.backgroundColor = "";
+        document.getElementById("control-menu").style.borderRadius = "";
+
+        document.getElementById("manual-menu").style.color = "#fff";
+        document.getElementById("manual-menu").style.backgroundColor = "";
+        document.getElementById("manual-menu").style.borderRadius = "";
+      }
+
+      function manualShow() {
+        document.getElementById("manual-menu").style.color = "#19B3D3";
+        document.getElementById("manual-menu").style.backgroundColor = "rgba(255,255,255,1)";
+        document.getElementById("manual-menu").style.borderRadius = "5px";
+  
+        document.getElementById("control-menu").style.color = "#fff";
+        document.getElementById("control-menu").style.backgroundColor = "";
+        document.getElementById("control-menu").style.borderRadius = "";
+
+        document.getElementById("command-menu").style.color = "#fff";
+        document.getElementById("command-menu").style.backgroundColor = "";
+        document.getElementById("command-menu").style.borderRadius = "";
+      }
+    </script>
+
+  <script src="/js/jquery-3.6.0.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
