@@ -250,3 +250,200 @@ transition-property: background; */
   color: #30c7e6;
 }
 
+.head-container {
+  width: 95%;
+  height: 5%;
+  /* background-color: #19B3D3; */
+
+  float: right;
+
+  /* display: flex; */
+  align-items: center;
+}
+
+.control-container {
+  width: 96%;
+  height: 75%;
+  /* background-color: #19B3D3; */
+
+  float: right;
+
+  display: flex;
+  align-items: center;
+}
+
+.command-container {
+  width: 96%;
+  height: 75%;
+  /* background-color: #19B3D3; */
+
+  float: right;
+
+  /* cursor: pointer; */
+
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+.intial {
+  width: 20%;
+  height: 10%;
+
+  margin: 2%;
+
+  font-weight: 800;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid #19B3D3;
+  background-color: #0B87A6;
+
+}
+
+.intial:hover {
+  background-color: #137b90;
+  color: #fff;
+}
+
+
+.release-spun {
+  width: 20%;
+  height: 10%;
+
+  margin: 2%;
+
+  font-weight: 800;
+  color: #fff;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid #19B3D3;
+  background-color: #0B87A6;
+}
+
+.release-spun:hover {
+  background-color: #137b90;
+  color: #fff;
+}
+
+.release-nonspun {
+  width: 20%;
+  height: 10%;
+
+  margin: 2%;
+
+  font-weight: 800;
+  color: #fff;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid #19B3D3;
+  background-color: #0B87A6;
+}
+
+.release-nonspun:hover {
+  background-color: #137b90;
+  color: #fff;
+}
+
+.release-retrive {
+  width: 20%;
+  height: 10%;
+
+  margin: 2%;
+
+  font-weight: 800;
+  color: #fff;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid #19B3D3;
+  background-color: #0B87A6;
+}
+
+.release-retrive:hover {
+  background-color: #137b90;
+  color: #fff;
+}
+
+.control-menu-left {
+  width: 50%;
+  height: 95%;
+  
+  /* background-color: #19d32f; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.control-menu-right {
+  width: 50%;
+  height: 95%;
+
+  /* background-color: #d31919; */
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.control-block {
+  width: 80%;
+  height: 15%;
+  margin: 0 auto;
+
+  cursor: pointer;
+  /* border: 1px solid white; */
+
+  
+}
+
+.control-block p {
+  font-weight: 600;
+  color: #c4c4c4;
+  margin: 0;
+  margin-left: 1.5%;
+}
+
+.control-block button {
+  margin-top: 2%;
+  margin-left: 1.5%;
+  width: 30%;
+  height: 50%;
+  font-weight: 700;
+
+}
+
+.Start {
+  background-color: #4cc790;
+  color: #fff;
+}
+
+.Pause {
+  background-color: chocolate;
+  color: #fff;
+}
+
+.Stop {
+  background-color: #cc1818;
+  color: #fff;
+}
+
+select {
+  width: 15%;
+  height: 100%;
+}
+
+option {
+  width: 15%;
+  height: 100%;
+}

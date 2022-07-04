@@ -69,11 +69,125 @@
         <div class="command-menu" id="command-menu" onclick="commandShow()">Special Command</div>
         <div class="manual-menu" id="manual-menu" onclick="manualShow()">Conveyor Manual</div>
   
+        
         <!-- <input type="search" id="search-input" onkeyup="search()" placeholder="Search for names.." class="search-menu"> -->
 
       </div>
+      <div class="search-menu head-container" id="drop-input" style="visibility: hidden; display: none;">
+        <label for="Type" style="color: #fff;">Type : </label>
+        <select name="Type" id="type">
+          <option value="1">Conveyor A</option>
+          <option value="2">Inlet</option>
+          <option value="3">Outlet</option>
+          <option value="4">Contrifuge</option>
+          <option value="5">Decapper</option>
+          <option value="6">Conveyor B</option>
+          <option value="7">DXi</option>
+          <option value="8">AU01</option>
+          <option value="9">Stockyard</option>
+          <option value="10">AI General</option>
+        </select>
+      </div>
+      <div class="head-container" id="head-container" style="visibility: hidden; display: none;">
+        <button id="Refresh">Refresh Module State</button>
+      </div>
+
+      <div class="control-container" id="control-container" style="visibility: hidden; display: none;">
+        <div class="control-menu-left">
+
+          <div class="control-block ConveyorA">
+            <p>ConveyorA</p>
+            <button id="StartConveyorA">Start</button>
+            <button id="PauseConveyorA">Pause</button>
+            <button id="StopConveyorA">Stop</button>
+          </div>
+
+          <div class="control-block Inlet">
+            <p>Inlet</p>
+            <button id="StartInlet">Start</button>
+            <button id="PauseInlet">Pause</button>
+            <button id="StopInlet">Stop</button>
+          </div>
+
+          <div class="control-block Outlet">
+            <p>Outlet</p>
+            <button id="StartOutlet">Start</button>
+            <button id="PauseOutlet">Pause</button>
+            <button id="StopOutlet">Stop</button>
+          </div>
+
+          <div class="control-block Con1">
+            <p>Contrifuge 1</p>
+            <button id="StartCon1">Start</button>
+            <button id="PauseCon1">Pause</button>
+            <button id="StopCon1">Stop</button>
+          </div>
+
+          <div class="control-block Con2">
+            <p>Contrifuge 2</p>
+            <button id="StartCon2">Start</button>
+            <button id="PauseCon2">Pause</button>
+            <button id="StopCon2">Stop</button>
+          </div>
+
+          <div class="control-block Decapper">
+            <p>Decapper</p>
+            <button id="StartDecapper">Start</button>
+            <button id="PauseDecapper">Pause</button>
+            <button id="StopDecapper">Stop</button>
+          </div>
+
+        </div>
+        <div class="control-menu-right">
+
+          <div class="control-block ConveyorB">
+            <p>ConveyorB</p>
+            <button id="StartConveyorB">Start</button>
+            <button id="PauseConveyorB">Pause</button>
+            <button id="StopConveyorB">Stop</button>
+          </div>
+
+          <div class="control-block DXi">
+            <p>DXi</p>
+            <button id="StartDXi">Start</button>
+            <button id="PauseDXi">Pause</button>
+            <button id="StopDXi">Stop</button>
+          </div>
+
+          <div class="control-block AU01">
+            <p>AU01</p>
+            <button id="StartAU01">Start</button>
+            <button id="PauseAU01">Pause</button>
+            <button id="StopAU01">Stop</button>
+          </div>
+
+          <div class="control-block ALXI2">
+            <p>ALXI2</p>
+            <button id="StartALXI2">Start</button>
+            <button id="PauseALXI2">Pause</button>
+            <button id="StopALXI2">Stop</button>
+          </div>
+
+          <div class="control-block Stockyard">
+            <p>Stockyard</p>
+            <button id="StartStockyard">Start</button>
+            <button id="PauseStockyard">Pause</button>
+            <button id="StopStockyard">Stop</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="command-container" id="command-container" style="visibility: hidden; display: none;">
+        <div class="intial">INTIAL MACHINE</div>
+        <div class="release-spun">RELEASE SPUN LANE CARRIER</div>
+        <div class="release-nonspun">RELEASE NON-SPUN LANE</div>
+        <div class="release-retrive">RELEASE RETRIVE LANE CARRIER</div>
+      </div>
 
     </div>
+
+
 
     <script>
       function controlShow() {
@@ -88,6 +202,19 @@
         document.getElementById("manual-menu").style.color = "#fff";
         document.getElementById("manual-menu").style.backgroundColor = "";
         document.getElementById("manual-menu").style.borderRadius = ""; 
+
+        document.getElementById("head-container").style.visibility = "visible";
+        document.getElementById("head-container").style.display = "";
+
+        document.getElementById("control-container").style.visibility = "visible";
+        document.getElementById("control-container").style.display = "";
+
+        document.getElementById("drop-input").style.visibility = "้hidden";
+        document.getElementById("drop-input").style.display = "none";
+
+        document.getElementById("command-container").style.visibility = "hidden";
+        document.getElementById("command-container").style.display = "none";
+
       }
   
       function commandShow() {
@@ -102,6 +229,19 @@
         document.getElementById("manual-menu").style.color = "#fff";
         document.getElementById("manual-menu").style.backgroundColor = "";
         document.getElementById("manual-menu").style.borderRadius = "";
+
+        document.getElementById("head-container").style.visibility = "hidden";
+        document.getElementById("head-container").style.display = "none";
+
+        document.getElementById("control-container").style.visibility = "hidden";
+        document.getElementById("control-container").style.display = "none";
+
+        
+        document.getElementById("drop-input").style.visibility = "visible";
+        document.getElementById("drop-input").style.display = "";
+
+        document.getElementById("command-container").style.visibility = "visible";
+        document.getElementById("command-container").style.display = "";
       }
 
       function manualShow() {
@@ -119,8 +259,381 @@
       }
     </script>
 
+
+
   <script src="/js/jquery-3.6.0.js"></script>
   <script src="/js/script.js"></script>
 </body>
+
+<!-- ConveyorA -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartConveyorA').click(function() {
+            
+              $('#StartConveyorA.Start').removeClass("Start");
+              $('#StopConveyorA.Stop').removeClass("Stop");
+              $('#PauseConveyorA.Pause').removeClass("Pause");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseConveyorA').click(function() {
+          $('#StartConveyorA.Start').removeClass("Start");
+              $('#StopConveyorA.Stop').removeClass("Stop");
+              $('#PauseConveyorA.Pause').removeClass("Pause");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopConveyorA').click(function() {
+              $('#StartConveyorA.Start').removeClass("Start");
+              $('#StopConveyorA.Stop').removeClass("Stop");
+              $('#PauseConveyorA.Pause').removeClass("Pause");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- Inlet -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartInlet').click(function() {
+            
+              $('#StartInlet.Start').removeClass("Start");
+              $('#StopInlet.Stop').removeClass("Stop");
+              $('#PauseInlet.Pause').removeClass("Pause");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseInlet').click(function() {
+              $('#StartInlet.Start').removeClass("Start");
+              $('#StopInlet.Stop').removeClass("Stop");
+              $('#PauseInlet.Pause').removeClass("Pause");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopInlet').click(function() {
+            $('#StartInlet.Start').removeClass("Start");
+              $('#StopInlet.Stop').removeClass("Stop");
+              $('#PauseInlet.Pause').removeClass("Pause");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- Outlet -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartOutlet').click(function() {
+            
+              $('#StartOutlet.Start').removeClass("Start");
+              $('#PauseOutlet.Pause').removeClass("Pause");
+              $('#StopOutlet.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseOutlet').click(function() {
+          $('#StartOutlet.Start').removeClass("Start");
+              $('#PauseOutlet.Pause').removeClass("Pause");
+              $('#StopOutlet.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopOutlet').click(function() {
+            $('#StartOutlet.Start').removeClass("Start");
+              $('#PauseOutlet.Pause').removeClass("Pause");
+              $('#StopOutlet.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- Con1 -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartCon1').click(function() {
+            
+              $('#StartCon1.Start').removeClass("Start");
+              $('#PauseCon1.Pause').removeClass("Pause");
+              $('#StopCon1.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseCon1').click(function() {
+          $('#StartCon1.Start').removeClass("Start");
+              $('#PauseCon1.Pause').removeClass("Pause");
+              $('#StopCon1.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopCon1').click(function() {
+            $('#StartCon1.Start').removeClass("Start");
+              $('#PauseCon1.Pause').removeClass("Pause");
+              $('#StopCon1.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- Con2 -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartCon2').click(function() {
+            
+              $('#StartCon2.Start').removeClass("Start");
+              $('#PauseCon2.Pause').removeClass("Pause");
+              $('#StopCon2.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseCon2').click(function() {
+          $('#StartCon2.Start').removeClass("Start");
+              $('#PauseCon2.Pause').removeClass("Pause");
+              $('#StopCon2.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopCon2').click(function() {
+            $('#StartCon2.Start').removeClass("Start");
+              $('#PauseCon2.Pause').removeClass("Pause");
+              $('#StopCon2.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- Decapper -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartDecapper').click(function() {
+            
+              $('#StartDecapper.Start').removeClass("Start");
+              $('#PauseDecapper.Pause').removeClass("Pause");
+              $('#StopDecapper.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseDecapper').click(function() {
+          $('#StartDecapper.Start').removeClass("Start");
+              $('#PauseDecapper.Pause').removeClass("Pause");
+              $('#StopDecapper.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopDecapper').click(function() {
+            $('#StartDecapper.Start').removeClass("Start");
+              $('#PauseDecapper.Pause').removeClass("Pause");
+              $('#StopDecapper.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- ConveyorB -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartConveyorB').click(function() {
+            
+              $('#StartConveyorB.Start').removeClass("Start");
+              $('#PauseConveyorB.Pause').removeClass("Pause");
+              $('#StopConveyorB.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseConveyorB').click(function() {
+          $('#StartConveyorB.Start').removeClass("Start");
+              $('#PauseConveyorB.Pause').removeClass("Pause");
+              $('#StopConveyorB.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopConveyorB').click(function() {
+            $('#StartConveyorB.Start').removeClass("Start");
+              $('#PauseConveyorB.Pause').removeClass("Pause");
+              $('#StopConveyorB.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- DXi -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartDXi').click(function() {
+            
+              $('#StartDXi.Start').removeClass("Start");
+              $('#PauseDXi.Pause').removeClass("Pause");
+              $('#StopDXi.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseDXi').click(function() {
+          $('#StartDXi.Start').removeClass("Start");
+              $('#PauseDXi.Pause').removeClass("Pause");
+              $('#StopDXi.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopDXi').click(function() {
+            $('#StartDXi.Start').removeClass("Start");
+              $('#PauseDXi.Pause').removeClass("Pause");
+              $('#StopDXi.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- AU01 -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartAU01').click(function() {
+            
+              $('#StartAU01.Start').removeClass("Start");
+              $('#PauseAU01.Pause').removeClass("Pause");
+              $('#StopAU01.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseAU01').click(function() {
+          $('#StartAU01.Start').removeClass("Start");
+              $('#PauseAU01.Pause').removeClass("Pause");
+              $('#StopAU01.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopAU01').click(function() {
+            $('#StartAU01.Start').removeClass("Start");
+              $('#PauseAU01.Pause').removeClass("Pause");
+              $('#StopAU01.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- ALXI2 -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartALXI2').click(function() {
+            
+              $('#StartALXI2.Start').removeClass("Start");
+              $('#PauseALXI2.Pause').removeClass("Pause");
+              $('#StopALXI2.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseALXI2').click(function() {
+          $('#StartALXI2.Start').removeClass("Start");
+              $('#PauseALXI2.Pause').removeClass("Pause");
+              $('#StopALXI2.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopALXI2').click(function() {
+            $('#StartALXI2.Start').removeClass("Start");
+              $('#PauseALXI2.Pause').removeClass("Pause");
+              $('#StopALXI2.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+</script>
+
+<!-- Stockyard -->
+<script>
+
+  $(document).ready(function() {
+          $('#StartStockyard').click(function() {
+            
+              $('#StartStockyard.Start').removeClass("Start");
+              $('#PauseStockyard.Pause').removeClass("Pause");
+              $('#StopStockyard.Stop').removeClass("Stop");
+              $(this).addClass("Start");
+          });
+      });
+
+      $(document).ready(function() {
+        $('#PauseStockyard').click(function() {
+          $('#StartStockyard.Start').removeClass("Start");
+              $('#PauseStockyard.Pause').removeClass("Pause");
+              $('#StopStockyard.Stop').removeClass("Stop");
+              $(this).addClass("Pause");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#StopStockyard').click(function() {
+            $('#StartStockyard.Start').removeClass("Start");
+              $('#PauseStockyard.Pause').removeClass("Pause");
+              $('#StopStockyard.Stop').removeClass("Stop");
+              $(this).addClass("Stop");
+          });
+      });
+
+      $(document).ready(function() {
+          $('#Refresh').click(function() {
+            $('.Start').removeClass("Start");
+              $('.Pause').removeClass("Pause");
+              $('.Stop').removeClass("Stop");
+          });
+      });
+
+</script>
 
 </html>
